@@ -1,0 +1,2 @@
+10.252.108.77 - sensor mamot
+10.252.108.78 - kafka mamot

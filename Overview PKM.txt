@@ -1,0 +1,37 @@
+Overview TA Mamot in nutshell : 
+
+- Peta serangan cyber
+- Inputnya adalah log(bentuknya text, kalau di ekstrak akan menghasilkan informasi serangan)
+	> Ada timestamp(waktu terjadi serangan)
+	> Ada IP source(alamat IP dari penyerang)
+	> Ada IP destination(alamat IP yang diserang)
+	> Signature serangan(Jenis serangan yang dilakukan)
+
+- Outputnya adalah visualisasi serangan
+	> Bentuknya peta, hasilnya (diharapkan) bisa seperti ini https://cybermap.kaspersky.com/ (amin :D)
+	> Selain itu, ada rekap data (sebutannya metric) ini seperti (Top 10 Jenis Serangan, Top 10 Waktu Serangan, dll)
+
+- Kenapa harus pakai big data ?
+	> Log atau informasi itu didapet dari yang namanya (sensor snort)
+	> Sensornya dipasang secara nyebar (jadi dipasang dimana-mana)
+	> Karena dipasang dimana-mana, data log/informasi serangan itu volumenya besar (antara 1jt - puluhan juta serangan per hari)
+	> Ini kalau diolah pake cara biasa (teknologi database biasa ataupun teknologi data warehouse) prosesya lambat
+	> Proses lambat, visualisasinya juga terlambat
+
+- Permasalahannya :
+	> Untuk aplikasi berbasis visualisasi, harusnya tepat waktu, dan bisa mengatasi data yang volumenya tinggi
+
+- Job Desc :
+	> Latar belakang : - Cari data dan kasus serangan cyber di Indonesia 5 tahun terakhir ini
+			   - Tujuan : Membuat peta serangan yang memvisualisasikan serangan cyber dengan waktu yang mendekati waktu sebenarnya (near-realtime)
+			   - Rumusan masalah : volume data yang besar & kebutuhan akan visualisasi secara near-realtime
+	> Kajian pustaka : - Cari pengertian singakat tentang : big data, snort sensor, apache spark, apache kafka, protocol MQTT
+			   - Nanti aku kasih proposal TA ku, disana ada kajian pustaka (tapi kepanjangan) kamu bisa ambil referensi disini
+			   - Nanti penyusunannya tak bantu kok 
+	> Anggaran Dana  : - Menyusun anggaran dana, untuk barang yang diperlukan, seperti ini
+			   - (important) Apache kafka+zookeeper, butuh perangkat penyimpanan yang volumenya besar dan kecepatannya tinggi (3TB Hardisk internal + 128GB SSD)
+			   - (important) Apache Spark, butuh RAM yang besar minimal 8^n alias (RAM 64 GB)
+			   - Sisanya untuk keperluan print proposal, laporan, dan hal hal yang diluar keperluan teknis lainnya (500k cukup)
+		           - Opsional maksudnya bisa pake ataupun bisa ngga juga, Kalau anggaran masih dalam range, bisa dimasukin, tapi kalau sudah diluar range
+		 	     Nggausah dimasukan
+			   - Dan tolong di tabel anggaran, kasih satu kolom di paling akhir buat deskripsi/penjelasan ya

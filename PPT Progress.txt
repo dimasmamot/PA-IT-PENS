@@ -1,0 +1,5 @@
+Progress
+- Tampilkan 
+- Manajemen user pakai interface matagaruda
+- Pembandingan di sisi performa
+- Buat weakness yang lama dan yang baru
